@@ -31,3 +31,48 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Claude Code ###
+.claude/
+
+### Environment Variables & Secrets ###
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+*.jks
+secrets/
+application-secrets.properties
+application-local.properties
+
+### Database ###
+*.db
+*.sqlite
+*.sql.gz
+data/
+pgdata/
+
+### Logs ###
+logs/
+*.log
+*.log.*
+spring.log
+
+### Temporary Files ###
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+### Docker ###
+docker-compose.override.yml
+
+### API Keys & Credentials ###
+**/credentials.json
+**/token.json
+firebase-adminsdk-*.json

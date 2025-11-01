@@ -1,0 +1,24 @@
+# Local Configuration Template
+# Copy this file to application-local.properties and update with your local settings
+# application-local.properties is ignored by git
+
+# Override any dev settings here for your local machine
+
+# Database (if different from dev defaults)
+#spring.datasource.url=jdbc:postgresql://localhost:5432/routing_local
+#spring.datasource.username=your_username
+#spring.datasource.password=your_password
+
+# API Keys (get your own keys from the providers)
+#google.maps.api.key=your-personal-google-maps-key
+#mapbox.api.key=your-personal-mapbox-key
+
+# Redis (if running on different port/host)
+#spring.data.redis.host=localhost
+#spring.data.redis.port=6379
+
+# JWT Secret (for local testing)
+#jwt.secret=your-local-jwt-secret-min-256-bits
+
+# Custom Port
+#server.port=8081
