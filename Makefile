@@ -27,29 +27,29 @@ help:
 
 # Docker Commands
 up:
-	docker-compose up -d
+	docker compose up -d
 	@echo "✓ Services started successfully!"
 	@echo "PostgreSQL: localhost:5432"
 	@echo "Redis: localhost:6379"
 	@echo "Kafka: localhost:9092"
 
 down:
-	docker-compose down
+	docker compose down
 	@echo "✓ Services stopped"
 
 restart:
-	docker-compose restart
+	docker compose restart
 	@echo "✓ Services restarted"
 
 logs:
-	docker-compose logs -f
+	docker compose logs -f
 
 clean:
-	docker-compose down -v
+	docker compose down -v
 	@echo "✓ Services stopped and volumes removed"
 
 tools:
-	docker-compose --profile tools up -d
+	docker compose --profile tools up -d
 	@echo "✓ Services started with management tools!"
 	@echo "PostgreSQL: localhost:5432"
 	@echo "Redis: localhost:6379"
@@ -77,11 +77,11 @@ dev: up
 
 # Database Commands
 db-shell:
-	docker-compose exec postgres psql -U postgres -d routing_dev
+	docker compose exec postgres psql -U postgres -d routing_dev
 
 db-reset:
-	docker-compose exec postgres psql -U postgres -c "DROP DATABASE IF EXISTS routing_dev;"
-	docker-compose exec postgres psql -U postgres -c "CREATE DATABASE routing_dev;"
+	docker compose exec postgres psql -U postgres -c "DROP DATABASE IF EXISTS routing_dev;"
+	docker compose exec postgres psql -U postgres -c "CREATE DATABASE routing_dev;"
 	@echo "✓ Database reset completed"
 
 # Installation
